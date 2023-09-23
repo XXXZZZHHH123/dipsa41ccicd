@@ -12,5 +12,5 @@ jobs:
     permissions:
       contents: write
     steps:
-      - nmae: Checkout
+      - name: Checkout
         uses: actions/checkout@v4
