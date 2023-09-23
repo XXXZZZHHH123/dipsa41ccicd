@@ -48,10 +48,11 @@ jobs:
                 "text": {
                   "type": "mrkdwn",
                   "text": "Xu Zihang is here! Danny Torrence left the following review for your property:"
-      }
-    }
-  ]
-}
+                }
+              }
+            ]
+          }
+
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
