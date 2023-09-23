@@ -40,19 +40,18 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.24.0
         with:
-          payload:
-            {
-              "text": "Workshop 2 -CICD - Xu Zihang.",
-              "blocks": [
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "Submission by : Kenneth , github url: http://www"
-                  }
-                },
-              ]
-            }
+          "payload": {
+            "text": "Workshop 2 - CICD - Xu Zihang.",
+            "blocks": [
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "Xu Zihang is here! Danny Torrence left the following review for your property:"
+      }
+    }
+  ]
+}
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
