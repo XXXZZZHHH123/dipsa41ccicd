@@ -46,7 +46,7 @@ jobs:
         with:
           payload: |
             {
-              "text": "Name: Xu Zihang\nEmail: E1133135@u.nus.edu\nMetriculation: E1133135\nRepository: https://github.com/XXXZZZHHH123/dipsa41ccicd\nDeployment: https://dipsa41ccicd-production.up.railway.app/"
+              "text": "Name: Xu Zihang\nEmail: E1133135@u.nus.edu\nMetriculation: e1133135\nRepository: https://github.com/XXXZZZHHH123/dipsa41ccicd\nDeployment: https://dipsa41ccicd-production.up.railway.app/"
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
