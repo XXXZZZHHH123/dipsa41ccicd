@@ -52,7 +52,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "Xu Zihang is here!"
+                    "text": "Xu Zihang is here!!!"
                   }
                 },
                 {
