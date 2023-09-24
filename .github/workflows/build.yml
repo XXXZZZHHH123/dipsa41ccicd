@@ -59,7 +59,7 @@ jobs:
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
-                      "text": "*Name:*\nXu Zihang\n\n*Matriculation:*\nA0276820B\n\n*Email:*\nE1133135@u.nus.edu\n\n*Repository:*\n ${{steps.repo_url.outputs.url}}"
+                      "text": "*Name:*\nXu Zihang\n\n*Matriculation:*\nA0276820B\n\n*Email:*\nE1133135@u.nus.edu\n\n*Repository:*\n${{steps.repo_url.outputs.url}}"
                     }
                   },
                   {
