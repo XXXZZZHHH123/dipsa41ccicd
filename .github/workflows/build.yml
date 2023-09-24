@@ -54,7 +54,7 @@ jobs:
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
-                      "text": "*Name*\nXu Zihang\n*Matriculation*\nE1133135\n*Email*\nE1133135@u.nus.edu*Repository:*https://github.com/XXXZZZHHH123/dipsa41ccicd\n"
+                      "text": "*Name:*\nXu Zihang\n*Matriculation:*\nE1133135\n*Email:*\nE1133135@u.nus.edu\n*Repository:*https://github.com/XXXZZZHHH123/dipsa41ccicd\n"
                     }
                   },
                   {
@@ -63,7 +63,7 @@ jobs:
                     "fields": [
                       {
                         "type": "mrkdwn",
-                        "text": "*Deployment*\n<https://dipsa41cicd-production-314f.up.railway.app/>"
+                        "text": "*Deployment:*\n<https://dipsa41cicd-production-314f.up.railway.app/> \n<https://dipsa41cicd-production-314f.up.railway.app/|Open application>"
                       }
                     ]
                   }
