@@ -32,21 +32,10 @@ jobs:
       - name: Install Railway
         run: npm i -g @railway/cli
 
-      - name: Get Repository URL
-        id: repo_url
-        run: echo "::set-output name=url::https://github.com/${{ github.repository }}"
-
-      - name: Deploy to Railway
+      - name: Deploy
         run: railway up
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        post-actions:
-          - name: Extract Railway Deployment URL
-            id: deployment_url
-            run: |
-              DEPLOYMENT_URL=$(railway status | grep "Deployment URL" | awk '{print $3}')
-              echo "::set-output name=url::$DEPLOYMENT_URL"
-
       - name: Send custom JSON data to Slack workflow
         id: slack
         uses: slackapi/slack-github-action@v1.24.0
@@ -65,7 +54,7 @@ jobs:
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
-                      "text": "*Name:*\nXu Zihang\n\n*Matriculation:*\nA0276820B\n\n*Email:*\nE1133135@u.nus.edu\n\n*Repository:*\n$${{ steps.repo_url.outputs.url }}"
+                      "text": "*Name:*\nXu Zihang\n\n*Matriculation:*\nA0276820B\n\n*Email:*\nE1133135@u.nus.edu\n\n*Repository:*\nhttps://github.com/XXXZZZHHH123/dipsa41ccicd\n"
                     }
                   },
                   {
@@ -74,7 +63,7 @@ jobs:
                     "fields": [
                       {
                         "type": "mrkdwn",
-                        "text": "*Deployment:*\n<$${{ steps.deployment_url.outputs.url }}/> \n<$${{ steps.deployment_url.outputs.url }}|Open application>"
+                        "text": "*Deployment:*\n<https://dipsa41cicd-production-314f.up.railway.app/> \n<https://dipsa41cicd-production-314f.up.railway.app/|Open application>"
                       }
                     ]
                   }
