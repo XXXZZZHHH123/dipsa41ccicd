@@ -71,7 +71,6 @@ jobs:
                         "text": "*Deployment:*\n<https://dipsa41cicd-production-314f.up.railway.app/> \n<https://dipsa41cicd-production-314f.up.railway.app/|Open application>"
                       }
                     ]
-                  }
                 ]
               }
         env:
