@@ -1,11 +1,10 @@
-name: Golang web example
-
+name : Golang web example
 on:
-  push:
-    branches:
-      - 'v1.0'
-    tags:
-      - 'latest'
+    push:
+        branches:
+        - 'v1.0'
+        tags:
+        - 'latest'
 
 jobs:
   ci:
@@ -15,19 +14,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Create tag
         uses: rickstaa/action-create-tag@v1
-        id: tag_create
+        id: "tag_create"
         with:
           tag: "latest"
           force_push_tag: true
           message: "Latest release"
-
       - name: Release
         uses: ncipollo/release-action@v1
         with:
-          skipIFReleaseExists: true
+          skipIfReleaseExists: true
           tag: "latest"
           artifacts: "release.tar.gz,foo/*.txt"
           bodyFile: "body.md"
@@ -39,56 +36,32 @@ jobs:
         run: railway up
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-
       - name: Send custom JSON data to Slack workflow
         id: slack
         uses: slackapi/slack-github-action@v1.24.0
         with:
-            payload: |
+          payload: |
               {
-                      "text": "CICD WorkShop by Xu Zihang",
-                      "blocks": [
+                "text": "DipSA41C CI/CD Assignment Submission",
+                "blocks": [
+                  {
+                    "type": "section",
+                    "text": {
+                      "type": "mrkdwn",
+                      "text": "*Name* \nXu Zihang                 *Matriculation* E1133135 \n*Email* \nfred@email.comE1133135@u.nus.edu
+                  },
+                  {
+                    "type": "section",
+                    "block_id": "section789",
+                    "fields": [
                       {
-                        "type": "section", 
-                        "text": {
                         "type": "mrkdwn",
-                        "text": "Name : Xu Zihang"
-                        }
-                      },
-                      {
-                        "type": "section",
-                        "text": {
-                        "type": "mrkdwn",
-                        "text": "Matriculation Number : E1133135" 
-                        }
-                      },
-                      {
-                        "type": "section", 
-                        "text": {
-                        "type": "mrkdwn",
-                        "text": "Email : E1133135@u.nus.edu"
-                        }
-                      },
-                      {
-                        "type": "section",
-                        "fields": [
-                        {
-                          "type": "mrkdwn",
-                          "text": "Repository : https://github.com/XXXZZZHHH123/dipsa41ccicd"
-                        }
-                        ]
-                      },
-                      {
-                        "type": "section",
-                        "fields": [
-                        {
-                          "type": "mrkdwn",  
-                          "text": "Deployment URL : https://dipsa41ccicd-production.up.railway.app/"
-                        }
-                        ]
+                        "text": "*Deployment* \n<https://link-url-here.org> \n<https://link-url-here.org|Open application>"
                       }
-                      ]
+                    ]
+                  }
+                ]
               }
         env:
-            SLACK_WEBHOOK_URL : ${{ secrets.SLACK_WEBHOOK_URL }}
-            LACK_WEBHOOK_TYPE : INCOMING_WEBHOOK
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
