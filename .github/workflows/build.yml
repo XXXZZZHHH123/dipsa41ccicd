@@ -42,8 +42,14 @@ jobs:
         with:
           payload: |
               {
-                "text": "DipSA41C CI/CD Assignment Submission",
                 "blocks": [
+                  {
+                    "type": "section",
+                    "text": {
+                      "type": "mrkdwn",
+                      "text": "DipSA41C CI/CD Assignment Submission"
+                    }
+                  },
                   {
                     "type": "section",
                     "text": {
