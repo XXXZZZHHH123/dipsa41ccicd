@@ -54,7 +54,7 @@ jobs:
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
-                      "text": "*Name*\nXu Zihang\n*Matriculation* E1133135\n*Email*\n E1133135@u.nus.edu"
+                      "text": "*Name*\nXu Zihang\n*Matriculation*\nE1133135\n*Email*\nE1133135@u.nus.edu*Repository:*https://github.com/XXXZZZHHH123/dipsa41ccicd\n"
                     }
                   },
                   {
