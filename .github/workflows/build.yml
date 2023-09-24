@@ -44,10 +44,51 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.24.0
         with:
-          payload: |
-            {
-              "text": "Name: Xu Zihang\nEmail: E1133135@u.nus.edu\nMetriculation: e1133135\nRepository: https://github.com/XXXZZZHHH123/dipsa41ccicd\nDeployment: https://dipsa41ccicd-production.up.railway.app/"
-            }
+            payload: |
+              {
+                      "text": "CICD WorkShop by Xu Zihang",
+                      "blocks": [
+                      {
+                        "type": "section", 
+                        "text": {
+                        "type": "mrkdwn",
+                        "text": "Name : Xu Zihang"
+                        }
+                      },
+                      {
+                        "type": "section",
+                        "text": {
+                        "type": "mrkdwn",
+                        "text": "Matriculation Number : E1133135" 
+                        }
+                      },
+                      {
+                        "type": "section", 
+                        "text": {
+                        "type": "mrkdwn",
+                        "text": "Email : E1133135@u.nus.edu"
+                        }
+                      },
+                      {
+                        "type": "section",
+                        "fields": [
+                        {
+                          "type": "mrkdwn",
+                          "text": "Repository : https://github.com/XXXZZZHHH123/dipsa41ccicd"
+                        }
+                        ]
+                      },
+                      {
+                        "type": "section",
+                        "fields": [
+                        {
+                          "type": "mrkdwn",  
+                          "text": "Deployment URL : https://dipsa41ccicd-production.up.railway.app/"
+                        }
+                        ]
+                      }
+                      ]
+              }
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+            SLACK_WEBHOOK_URL : ${{ secrets.SLACK_WEBHOOK_URL }}
+            LACK_WEBHOOK_TYPE : INCOMING_WEBHOOK
