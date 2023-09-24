@@ -57,7 +57,7 @@ jobs:
                     "fields": [
                       {
                         "type": "mrkdwn",
-                        "text": "*Deployment*\n<https://dipsa41cicd-production-314f.up.railway.app/>
+                        "text": "*Deployment*\n<https://dipsa41cicd-production-314f.up.railway.app/>"
                       }
                     ]
                   }
