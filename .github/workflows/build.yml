@@ -48,7 +48,7 @@ jobs:
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
-                      "text": "*Name*\nXu Zihang\n*Matriculation* e1133135\n*Email*\nfred@email.com E1133135@u.nus.edu"
+                      "text": "*Name*\nXu Zihang\n*Matriculation* E1133135\n*Email*\nfred@email.com E1133135@u.nus.edu"
                     }
                   },
                   {
@@ -57,7 +57,7 @@ jobs:
                     "fields": [
                       {
                         "type": "mrkdwn",
-                        "text": "*Deployment*\n<https://link-url-here.org>\n<https://link-url-here.org|Open application>"
+                        "text": "*Deployment*\n<https://dipsa41cicd-production-314f.up.railway.app/>\n<https://dipsa41cicd-production-314f.up.railway.app/>"
                       }
                     ]
                   }
